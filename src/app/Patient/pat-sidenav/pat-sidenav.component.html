@@ -1,0 +1,31 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Save Lifes</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="Pat-Profile">Profile</a>
+      <a mat-list-item routerLink="View-Bloodgrp">BloodGroup-List</a>
+      <a mat-list-item routerLink="view-operation">Operation-Details</a>
+      <a mat-list-item routerLink="ChangePwd">Change-Password</a>
+      <a mat-list-item routerLink="/Homepage">Sign-Out</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span>HMS</span>
+    </mat-toolbar>
+<ng-container>
+  <router-outlet></router-outlet>
+</ng-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

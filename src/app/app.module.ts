@@ -20,6 +20,28 @@ import { AddBGComponent } from './Admin/Blood-Group/add-bg/add-bg.component';
 import { ViewBGComponent } from './Admin/Blood-Group/view-bg/view-bg.component';
 import { ViewPatientsComponent } from './Admin/patients/view-patients/view-patients.component';
 import { HomeComponent } from './Home/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { PatientLoginComponent } from './Patient/patient-login/patient-login.component';
+import { PatientRegComponent } from './Patient/patient-reg/patient-reg.component';
+import { SidenavComponent } from './Admin/sidenav/sidenav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DoctorLoginComponent } from './Doctors/doctor-login/doctor-login.component';
+import { DocSidenavComponent } from './Doctors/doc-sidenav/doc-sidenav.component';
+import { AdminDoctorComponent } from './Admin/admin-doctor/admin-doctor.component';
+import { AdminOperationComponent } from './Admin/admin-operation/admin-operation.component';
+import { AdminBloodgrpComponent } from './Admin/admin-bloodgrp/admin-bloodgrp.component';
+import { DocProfileComponent } from './Doctors/doc-profile/doc-profile.component';
+import { ViewPatientComponent } from './Doctors/view-patient/view-patient.component';
+import { AddMedicineComponent } from './Doctors/add-medicine/add-medicine.component';
+import { DocChgPwdComponent } from './Doctors/doc-chg-pwd/doc-chg-pwd.component';
+import { PatSidenavComponent } from './Patient/pat-sidenav/pat-sidenav.component';
+import { PatchngPwdComponent } from './Patient/patchng-pwd/patchng-pwd.component';
+import { PatProfileComponent } from './Patient/pat-profile/pat-profile.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +57,22 @@ import { HomeComponent } from './Home/home/home.component';
     AddBGComponent,
     ViewBGComponent,
     ViewPatientsComponent,
-    HomeComponent
+    HomeComponent,
+    PatientLoginComponent,
+    PatientRegComponent,
+    SidenavComponent,
+    DoctorLoginComponent,
+    DocSidenavComponent,
+    AdminDoctorComponent,
+    AdminOperationComponent,
+    AdminBloodgrpComponent,
+    DocProfileComponent,
+    ViewPatientComponent,
+    AddMedicineComponent,
+    DocChgPwdComponent,
+    PatSidenavComponent,
+    PatchngPwdComponent,
+    PatProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +80,14 @@ import { HomeComponent } from './Home/home/home.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

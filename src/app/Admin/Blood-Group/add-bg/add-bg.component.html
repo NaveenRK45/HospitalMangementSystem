@@ -1,1 +1,27 @@
-<p>add-bg works!</p>
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="BGform" (ngSubmit)="Add()">
+          <h2>ADD BLOOD-GROUP</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Blood Group</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+             formControlName="bloodgroup"
+            >
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Blood Packets</mat-label>
+            <input
+             matInput
+             type="text"
+             class="form-control" 
+             formControlName="bloodpackets"
+            >
+          </mat-form-field>
+          <button mat-raised-button color="primary" [disabled]="this.BGform.invalid" type="submit">ADD</button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -1,1 +1,35 @@
-<p>view-doctor works!</p>
+<div class="table-responsive">
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">S.No</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Mobileno</th>
+        <th scope="col">EmailId</th>
+        <th scope="col">Specializatiion</th>
+        <th scope="col">ConsultationFee</th>
+        <th scope="col">Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let d of ViewDoctors; index as i">
+        <td>{{i+1}}</td>
+        <td>{{d.firstname}}</td>
+        <td>{{d.lastname}}</td>
+        <td>{{d.username}}</td>
+        <td>{{d.mobileno}}</td>
+        <td>{{d.emailid}}</td>
+        <td>{{d.specialization}}</td>
+        <td>{{d.consultationfee}}</td>
+        <td>{{d.address}}</td>
+        <td>
+            <button class="btn btn-primary" (click)="edit(d)">Edit</button>&nbsp;
+            <button class="btn btn-danger" (click)="deleteDoctor(d)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+              <th scope="col">S.No</th>
+              <th scope="col">PatientName</th>
+              <th scope="col">MobileNo</th>
+              <th scope="col">Address</th>
+              <th scope="col">AppointmentDate</th>
+              <th scope="col">Consult Doctor</th>
+              <th scope="col">Problem</th>
+              <th scope="col">Medicine</th>
+              <th scope="col">AddMedicine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let p of viewpatient; index as i">
+              <td>{{i+1}}</td>
+              <td>{{p.patientname}}</td>
+              <td>{{p.mobileno}}</td>
+              <td>{{p.address}}</td>
+              <td>{{p.appointmentdate}}</td>
+              <td>{{p.doctorname}}</td>
+              <td>{{p.problem}}</td>
+              <td>{{p.medicine}}</td>
+              <td>
+                <button class="btn btn-primary" (click)="Add(p)">ADD</button>
+              </td>
+            </tr>
+          </tbody>
+    </table>
+  </div>
+
