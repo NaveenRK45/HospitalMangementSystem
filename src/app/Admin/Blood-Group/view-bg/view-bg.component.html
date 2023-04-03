@@ -1,1 +1,18 @@
-<p>view-bg works!</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Blood Group</th>
+            <th scope="col">Blood Packets</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of ViewBlood; index as i">
+            <td>{{i+1}}</td>
+            <td>{{b.bloodgroup}}</td>
+            <td>{{b.bloodpackets}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>

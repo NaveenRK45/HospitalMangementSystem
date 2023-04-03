@@ -1,3 +1,4 @@
+import { Router, Routes } from '@angular/router';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  constructor(private Routes:Router){}
 
+  admin(){
+    this.Routes.navigate(['/AdminLogin'])
+  }
 }

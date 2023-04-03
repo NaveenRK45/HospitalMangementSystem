@@ -1,1 +1,21 @@
-<p>view-operation works!</p>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">S.No</th>
+            <th scope="col">Doctor Name</th>
+            <th scope="col">Operation Name</th>
+            <th scope="col">Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let O of ViewOperation; index as i">
+            <td>{{i+1}}</td>
+            <td>{{O.doctorname}}</td>
+            <td>{{O.operationname}}</td>
+            <td>{{O.cost}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+

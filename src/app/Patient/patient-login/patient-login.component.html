@@ -1,0 +1,30 @@
+<div class="signin-content">
+    <mat-card>
+      <mat-card-content>
+        <form [formGroup]="loginForm" (ngSubmit)="Login()">
+          <h2>Patient-Login</h2>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>UserName</mat-label>
+            <input 
+             matInput
+             class="form-control" 
+             formControlName="patientname"
+            >
+          </mat-form-field>
+          <mat-form-field class="full-width-input" appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+             matInput
+             type="password"
+             class="form-control" 
+             formControlName="password"
+            >
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Login</button>
+          <div class="row">
+            <a routerLink="/Homepage/PatientReg">New Users RegisterHere</a>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>

@@ -1,0 +1,39 @@
+<div class="container">
+    <form [formGroup]="AddMedicine" (ngSubmit)="Add()">
+        <h3>ADD-MEDICINE</h3>
+        <div class="main">
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>PatientName</mat-label>
+                        <input matInput formControlName="patientname" >
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mobileno</mat-label>
+                        <input matInput formControlName="mobileno">
+                    </mat-form-field>
+                </div>
+
+
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Problem</mat-label>
+                        <input matInput formControlName="problem">
+                    </mat-form-field>
+                </div>
+                <div class="row">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Medicine</mat-label>
+                        <input matInput formControlName="medicine">
+                    </mat-form-field>
+                </div>
+        <div class="text-center mt-4">
+            <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button> &nbsp;
+            <button mat-raised-button color="accent"  [disabled]="AddMedicine.invalid">Edit</button>
+        </div>
+        </div>
+    </form>
+</div>
+
+

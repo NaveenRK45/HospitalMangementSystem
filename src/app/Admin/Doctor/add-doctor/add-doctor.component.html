@@ -1,1 +1,76 @@
-<p>add-doctor works!</p>
+<div class="container">
+    <form [formGroup]="AddDoctor" (ngSubmit)="Add()">
+        <h3>ADD-DOCTOR</h3>
+        <div class="main">
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>First Name</mat-label>
+                        <input matInput formControlName="firstname" >
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput formControlName="lastname">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>User Name</mat-label>
+                        <input matInput formControlName="username">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput type="text" class="form-control" formControlName="address"></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Mobileno</mat-label>
+                        <input matInput formControlName="mobileno">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>EmailId</mat-label>
+                        <input matInput formControlName="emailid">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Specialization</mat-label>
+                        <mat-select formControlName="specialization">
+                            <mat-option value="Orthopedics">Orthopedics</mat-option>
+                            <mat-option value="Dermatology">Dermatology</mat-option>
+                            <mat-option value="Pediatrics">Pediatrics</mat-option>
+                            <mat-option value="Radiology">Radiology</mat-option>
+                            <mat-option value="General Surgery">General Surgery</mat-option>
+                            <mat-option value="Ophthalmology">Ophthalmology</mat-option>
+                            <mat-option value="Gynecology">Gynecology</mat-option>
+                            <mat-option value="Obstetrics">Obstetrics</mat-option>
+                          </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field appearance="outline">
+                        <mat-label>ConsultationFee</mat-label>
+                        <input matInput formControlName="consultationfee">
+                    </mat-form-field>
+                </div>
+            </div>
+        <div class="text-center mt-4">
+            <button mat-stroked-button color="warn" mat-dialog-close>Cancel</button> &nbsp;
+            <button mat-raised-button color="accent"  [disabled]="AddDoctor.invalid">Add</button>
+        </div>
+        </div>
+    </form>
+</div>
